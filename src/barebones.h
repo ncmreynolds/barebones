@@ -13,7 +13,7 @@ char barebonescss[] PROGMEM =
 
 #include "ESPAsyncWebServer.h"
 
-void addHeader(AsyncResponseStream *responseconst char* title){response->printf_P(headerhtml, title);}  //Include title
+void addHeader(AsyncResponseStream *response, const char* title){response->printf_P(headerhtml, title);}  //Include title
 void addFooter(AsyncResponseStream *response){response->printf_P(footerhtml);}
 void printTagHx(AsyncResponseStream *response, String text, uint8_t level){response->printf_P(PSTR("<h%u>%s</h%u>"), level, text.c_str(), level);}
 void printTagHx(AsyncResponseStream *response, const char* text, uint8_t level){response->printf_P(PSTR("<h%u>%s</h%u>"), level, text, level);}
